@@ -1,6 +1,6 @@
 cask "eighty" do
-  version "0.1.4"
-  sha256 "a137b6e1775ffe999f357cebaec10535ec3a11c62aa1032642ebe2c2b433430b"
+  version "0.1.5"
+  sha256 "ae1ca0d8f2135d5bc00fa01aa0d672e0a2593f1ddf264c2de6a3a99d6d0cc7c6"
 
   url "https://github.com/NathanColosimo/eighty/releases/download/v#{version}/Eighty-#{version}.zip"
   name "Eighty"
