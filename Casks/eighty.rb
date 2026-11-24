@@ -1,6 +1,6 @@
 cask "eighty" do
-  version "0.1.1"
-  sha256 "e0b5cee0b12fa12887e06a7d7851acef6651afa687a14a65982b09a9c5593471"
+  version "0.1.2"
+  sha256 "39eb3f51e598dc1a92464ee1e7b1caca1841a61bf068db9b36f001fb1e525961"
 
   url "https://github.com/NathanColosimo/eighty/releases/download/v#{version}/Eighty-#{version}.zip"
   name "Eighty"
@@ -17,12 +17,6 @@ cask "eighty" do
 
   app "Eighty.app"
   binary "#{appdir}/Eighty.app/Contents/Helpers/eighty"
-
-  # The app is ad-hoc signed, not notarized, so clear the download quarantine.
-  # The declarative postflight_steps that brew style prefers have no xattr step.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Eighty.app"]
-  end
 
   # Homebrew runs uninstall directives on every upgrade too, so the background
   # service (its own root-owned copy, unaffected by upgrades) is removed only by
